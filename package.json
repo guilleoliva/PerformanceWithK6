@@ -1,0 +1,16 @@
+{
+  "name": "performance-tinybird-k6",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "k6 run src/main.js",
+    "test:smoke": "k6 run src/main.js -e ENV=smoke",
+    "test:load": "k6 run src/main.js -e ENV=load",
+    "test:stress": "k6 run src/main.js -e ENV=stress",
+    "report": "node generate-report.js"
+  },
+  "dependencies": {
+    "k6": "^0.0.0",
+    "k6-html-reporter": "^1.0.0",
+    "papaparse": "^5.3.0"
+  }
+}
